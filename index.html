@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenNest</title>
+    <link rel="shortcut icon" href="images/plantlogo-removebg-preview.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body class="bg-light">
+
+    <!-- 1. NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light bg-opacity-50 sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/plantlogo-removebg-preview.png" alt="Company Logo" width="32" height="32" class="me-2">
+                <span class="text-dark-green fw-bold fs-4">GreenNest</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2 align-items-lg-center">
+                    <li class="fw-bold nav-item"><a class="text-dark-green nav-link" href="#home">Home</a></li>
+                    <li class="fw-bold nav-item"><a class="text-dark-green nav-link" href="#shop">Shop</a></li>
+                    <li class="fw-bold nav-item"><a class="text-dark-green nav-link" href="#plant-care">Plant Care</a></li>
+                    <li class="fw-bold nav-item"><a class="text-dark-green nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#" id="cartBtn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                            <i class="bi bi-cart3 fs-5 text-dark-green"></i> 
+                            <span id="cartCount" class="badge rounded-pill bg-success position-absolute top-0 start-100 translate-middle" style="font-size:0.65rem;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <header id="home" class="hero-bg text-white border-bottom py-5">
+        <div class="container my-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span
+                        class="badge bg-light-subtle text-dark-green border border-primary-subtle rounded-pill px-3 py-2 mb-3 fw-semibold text-uppercase">New
+                        Release v5.3</span>
+                    <h1 class="display-3 fw-extrabold text-white mb-3">Discover beautiful indoor plants for every corner
+                        of your home.</h1>
+                    <p class="lead fw-bold text-white mb-4">Shop plants, pots and care tools delivered with love</p>
+                    <div class="d-grid d-sm-flex justify-content-sm-center justify-content-lg-start gap-3">
+                        <a href="#features" class="btn btn-dark-green btn-lg px-4 shadow-sm fw-bold ">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- 3. FEATURES SECTION -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Heading -->
+            <div class="text-center mb-5">
+                <h2 class="text-dark-green fw-bold ">Why Shop With GreenNest?</h2>
+                <p class="text-secondary">We're here to make plant shopping smooth and stress-free.</p>
+            </div>
+            <div class="row align-items-center g-4">
+                <!-- Left Column-->
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column gap-4">
+                        <div>
+                            <i class="bi bi-truck fs-3 text-success"></i> <!-- Font size, margin-bottom-->
+                            <h6 class="text-dark-green fw-bold">Free and Fast Delivery</h6>
+                            <p class="text-secondary small">Plants delivered fresh to your door — free on orders over
+                                $50.</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-arrow-return-left fs-3 text-success"></i>
+                            <h6 class="text-dark-green fw-bold">Hassle-Free Returns</h6>
+                            <p class="text-secondary small">Changed your mind? Return it within 30 days, no stress.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- CENTER IMAGE -->
+                <div class="col-lg-6 col-md-12 text-center">
+                    <img src="images/plantcenter.png" alt="Plant" class="img-fluid" style="max-height: 450px;">
+                </div>
+
+
+                <!-- RIGHT COLUMN -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="d-flex flex-column gap-4">
+                        <div>
+                            <i class="bi bi-headset fs-3 text-success"></i>
+                            <h6 class="text-dark-green fw-bold">24/7 Customer Support</h6>
+                            <p class="text-secondary small">We're here whenever you need us — day or night.</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-shield-check fs-3 text-success"></i>
+                            <h6 class="text-dark-green fw-bold">Secure Payments</h6>
+                            <p class="text-secondary small">Pay safely with 100% encrypted checkout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="explore-bg py-5">
+        <div class="container my-5">
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 d-flex align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <span
+                                class="badge bg-white bg-opacity-25 text-white rounded-pill px-3 py-1 mb-3 small">Indoors</span>
+                            <h4 class="fw-bold text-white mb-2">Low-Maintenance Greens</h4>
+                            <p class="text-white-50 small mb-3">
+                                Elevate your interior with easy-care indoor plants. These beauties purify the air, add a
+                                calming vibe, and grow happily in low to medium light — perfect for home or office.
+                            </p>
+                            <a href="#" class="btn btn-light rounded-pill px-4 fw-semibold">Explore Now</a>
+                        </div>
+                        <img src="images/indoor.jpg" alt="Indoor Plant" class="glass-card-img">
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-6">
+                    <div class="glass-card p-4 d-flex align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <span
+                                class="badge bg-white bg-opacity-25 text-white rounded-pill px-3 py-1 mb-3 small">Outdoors</span>
+                            <h4 class="fw-bold text-white mb-2">Garden-Ready Plants</h4>
+                            <p class="text-white-50 small mb-3">
+                                Bring life to your outdoor space with vibrant, sun-loving plants. Perfect for patios,
+                                balconies, and home gardens — built to thrive in natural light and fresh air.
+                            </p>
+                            <a href="#" class="btn btn-light rounded-pill px-4 fw-semibold">Explore Now</a>
+                        </div>
+                        <img src="images/garden.jpg" alt="Outdoor Plant" class="glass-card-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="shop" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-dark-green">Our Favorite Plants</h2>
+                <p class="text-secondary">Take home one of our favorites — easy to care for, hard not to love.</p>
+            </div>
+
+            <ul class="nav justify-content-center mb-5 border-bottom pb-2" id="filterTabs">
+                <li class="nav-item"><a
+                        class="nav-link active text-dark-green fw-bold border-bottom border-2 border-success filter-tab"
+                        href="#" data-filter="all">All plants</a></li>
+                <li class="nav-item"><a class="nav-link text-secondary filter-tab"  href="#" data-filter="new">New Arrivals</a></li>
+                <li class="nav-item"><a class="nav-link text-secondary filter-tab" href="#" data-filter="sale">Sales</a></li>
+                <li class="nav-item"><a class="nav-link text-secondary filter-tab" href="#" data-filter="easy">Easy Care</a></li>
+            </ul>
+
+            <div class="row g-4" id="plantGrid">
+                <div class="col-lg-3 col-md-6 plant-card" data-category="sale easy">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/philodendron.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Philodendron</h5>
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-secondary">$30.00</span>
+                                <span class="fw-bold ms-2">$20.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Philodendron" data-price="20.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 plant-card" data-category="new">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/snakeplant.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Dracaena trifasciata</h5>
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-secondary">$30.00</span>
+                                <span class="fw-bold ms-2">$20.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Dracaena trifasciata" data-price="20.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 plant-card" data-category="new sale">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/ficusLy.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Ficus Lyrata</h5>
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-secondary">$30.00</span>
+                                <span class="fw-bold ms-2">$20.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Ficus Lyrata" data-price="20.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 plant-card" data-category="sale">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/jade.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Caladium</h5>
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-secondary">$30.00</span>
+                                <span class="fw-bold ms-2">$20.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Caladium" data-price="20.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 4. CALL TO ACTION & FOOTER -->
+    <footer class="bg-dark-green text-white pt-5 pb-5">
+        <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+            <div class="d-flex align-items-center mb-3">
+                <img src="images/plantlogo-removebg-preview.png" alt="GreenNest Logo" width="32" height="32" class="me-2">
+                <h5 class="fw-bold mb-0">GreenNest</h5>
+             </div>
+                <p class="text-white-50 small">Traemos naturaleza a tu espacio. Plantas frescas, cuidado experto y entrega directa a tu puerta.</p>
+            </div>
+             <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Shop</h6>
+                <ul class="list-unstyled text-white-50 small">
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">All Plants</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">New Arrivals</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Sale</a></li>
+                </ul>
+            </div>
+             <div class="col-lg-2 col-md-6">
+                <h6 class="fw-bold mb-3">Company</h6>
+                <ul class="list-unstyled text-white-50 small">
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">About Us</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <h6 class="fw-bold mb-3">Stay in the loop</h6>
+                        <p class="text-white-50 small">Get plant care tips and exclusive offers.</p>
+                        <form id="newsletterForm" class="d-flex gap-2" novalidate>
+                            <input type="email" id="newsletterEmail" class="form-control" placeholder="Your email" required>
+                            <button type="submit" class="btn btn-light fw-bold">Subscribe</button>
+                        </form>
+                        <p id="newsletterMsg" class="small mt-2 mb-0"></p>
+                    
+                    </div>
+                    </div>
+                    <hr class="text-white-50 my-4">
+                    <p class="text-center text-white-50 small mb-0">© 2026 GreenNest. All rights reserved.</p>
+                    </div>
+                    
+                    </footer>
+                    
+                    <!-- CART OFFCANVAS -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fw-bold text-dark-green">Your Cart</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <div class="offcanvas-body d-flex flex-column">
+                            <ul id="cartItems" class="list-unstyled flex-grow-1"></ul>
+                            <p id="cartEmptyMsg" class="text-secondary text-center">Your cart is empty.</p>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold mb-3">
+                                <span>Subtotal</span>
+                                <span id="cartSubtotal">$0.00</span>
+                            </div>
+                            <button id="clearCartBtn" class="btn btn-outline-secondary btn-sm">Clear cart</button>
+                        </div>
+                    </div>
+     
+
+    <!-- Bootstrap 5 JavaScript Bundle CDN (Required for responsive navbar dropdowns to open) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
