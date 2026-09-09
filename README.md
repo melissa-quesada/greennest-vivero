@@ -31,5 +31,7 @@ Practiqué manipulación dinámica del DOM (crear y destruir elementos HTML seg�
 El diseño y las funcionalidades principales están terminados. Próximas mejoras planeadas:
 
 ⸙ Persistencia del carrito con localStorage (actualmente se reinicia al recargar la página)
+
 ⸙ Botones de +/- para ajustar cantidad de cada producto en el carrito, en vez de solo eliminar la línea completa
+
 ⸙ Buscador de productos por nombre
