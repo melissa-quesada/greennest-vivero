@@ -63,6 +63,7 @@ document.querySelectorAll(".add-to-cart").forEach((btn) => {
 });
 
 function renderCart() {
+  saveCart(); 
   cartItemsEl.innerHTML = "";
 
   if (cart.length === 0) {
@@ -103,6 +104,11 @@ function renderCart() {
   });
 }
 
+//Local storage
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 clearCartBtn.addEventListener("click", () => {
   cart = [];
   renderCart();
@@ -129,5 +135,9 @@ newsletterForm.addEventListener("submit", (e) => {
   }
 });
 
-// Inicializa el carrito vacío al cargar
+// Intenta recuperar el carrito guardado, si no hay nada, empieza vacío
+const savedCart = localStorage.getItem("cart");
+if (savedCart) {
+  cart = JSON.parse(savedCart); //se convierte de vuelta a array
+}
 renderCart();
