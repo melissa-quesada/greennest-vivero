@@ -2,6 +2,8 @@
 
 Landing page de e-commerce para una tienda de plantas, con navegación funcional, filtro de productos por categoría, carrito de compras interactivo y validación de formulario. Construida con HTML, CSS y JavaScript puro sobre Bootstrap 5.
 
+**Demo en vivo:**  https://melissa-quesada.github.io/greennest-vivero/
+
 ## Tecnologías usadas
 ⸙ HTML5
 
