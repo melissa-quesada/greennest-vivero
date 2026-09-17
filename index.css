@@ -1,3 +1,68 @@
+.plant-carousel {
+    position: relative;
+}
+.plant-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem 0.5rem 1.5rem;
+    /* Oculta la barra de scroll pero mantiene el desplazamiento */
+    scrollbar-width: none;
+}
+
+
+.plant-track .plant-card {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+}
+
+.plant-track .plant-card.d-none {
+    display: none !important;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: #163f24;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.carousel-btn:hover {
+    background-color: #0f2b18;
+}
+
+.carousel-btn-prev {
+    left: -30px;
+}
+
+.carousel-btn-next {
+    right: -30px;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+#home, #shop, #plant-care {
+    scroll-margin-top: 90px;
+}
+
+.plant-card.d-none {
+    display: none !important;
+}
+
 .hero-bg {
     background-image: url('Images/plantbg.jpg');
     background-size: cover;

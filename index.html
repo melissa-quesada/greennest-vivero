@@ -55,7 +55,7 @@
                         of your home.</h1>
                     <p class="lead fw-bold text-white mb-4">Shop plants, pots and care tools delivered with love</p>
                     <div class="d-grid d-sm-flex justify-content-sm-center justify-content-lg-start gap-3">
-                        <a href="#features" class="btn btn-dark-green btn-lg px-4 shadow-sm fw-bold ">Shop Now</a>
+                        <a href="#shop" class="btn btn-dark-green btn-lg px-4 shadow-sm fw-bold ">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -155,8 +155,6 @@
     </section>
 
 
-
-
     <section id="shop" class="py-5">
         <div class="container">
             <div class="text-center mb-4">
@@ -173,8 +171,13 @@
                 <li class="nav-item"><a class="nav-link text-secondary filter-tab" href="#" data-filter="easy">Easy Care</a></li>
             </ul>
 
-            <div class="row g-4" id="plantGrid">
-                <div class="col-lg-3 col-md-6 plant-card" data-category="sale easy">
+            <div class="plant-carousel">
+                <button id="carouselPrev" class="carousel-btn carousel-btn-prev" aria-label="Previous plants">
+                    <i class="bi bi-chevron-left"></i>  <!-- arrow icon -->
+                </button>
+
+            <div class="plant-track" id="plantGrid">
+                <div class="plant-card" data-category="sale easy">
                     <div class="card shadow border-0 bg-light-subtle p-3 h-100">
                         <img src="images/philodendron.png" class="card-img-top" alt="Philodendron">
                         <div class="card-body text-center">
@@ -189,13 +192,12 @@
                 </div>
 
 
-                <div class="col-lg-3 col-md-6 plant-card" data-category="new">
+                <div class="plant-card" data-category="new easy">
                     <div class="card shadow border-0 bg-light-subtle p-3 h-100">
                         <img src="images/snakeplant.png" class="card-img-top" alt="Philodendron">
                         <div class="card-body text-center">
-                            <h5 class="fw-bold text-dark-green">Dracaena trifasciata</h5>
+                            <h5 class="fw-bold text-dark-green">Dracaena </h5>
                             <p class="mb-2">
-                                <span class="text-decoration-line-through text-secondary">$30.00</span>
                                 <span class="fw-bold ms-2">$20.00</span>
                             </p>
                             <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Dracaena trifasciata" data-price="20.00">Add to Cart</a>
@@ -203,23 +205,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-lg-3 col-md-6 plant-card" data-category="new sale">
-                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
-                        <img src="images/ficusLy.png" class="card-img-top" alt="Philodendron">
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold text-dark-green">Ficus Lyrata</h5>
-                            <p class="mb-2">
-                                <span class="text-decoration-line-through text-secondary">$30.00</span>
-                                <span class="fw-bold ms-2">$20.00</span>
-                            </p>
-                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Ficus Lyrata" data-price="20.00">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-3 col-md-6 plant-card" data-category="sale">
+                                <div class="plant-card" data-category="sale">
                     <div class="card shadow border-0 bg-light-subtle p-3 h-100">
                         <img src="images/jade.png" class="card-img-top" alt="Philodendron">
                         <div class="card-body text-center">
@@ -232,7 +218,83 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="plant-card" data-category="new ">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/ficusLy.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Ficus Lyrata</h5>
+                            <p class="mb-2">
+                                <span class="fw-bold ms-2">$30.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Ficus Lyrata" data-price="30.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="plant-card" data-category="sale">
+                        <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                            <img src="images/peace_lily.png" class="card-img-top" alt="Peace Lily">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold text-dark-green">Peace Lily</h5>
+                                <p class="mb-2">
+                                    <span class="text-decoration-line-through text-secondary">$28.00</span>
+                                    <span class="fw-bold ms-2">$18.00</span>
+                                </p>
+                                <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Peace Lily" data-price="18.00">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                  <div class="plant-card" data-category="new">
+                        <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                            <img src="images/monstera.png" class="card-img-top" alt="Monstera Deliciosa">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold text-dark-green">Monstera</h5>
+                                <p class="mb-2">
+                                    <span class="fw-bold ms-2">$25.00</span>
+                                </p>
+                                <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Monstera Deliciosa" data-price="25.00">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="plant-card" data-category="easy ">
+                        <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                            <img src="images/aglaonema.png" class="card-img-top" alt="Pothos">
+                            <div class="card-body text-center">
+                                <h5 class="fw-bold text-dark-green">Aglanonema</h5>
+                                <p class="mb-2">
+                                    <span class="fw-bold ms-2">$15.00</span>
+                                </p>
+                                <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Pothos" data-price="15.00">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plant-card" data-category=" easy sale">
+                    <div class="card shadow border-0 bg-light-subtle p-3 h-100">
+                        <img src="images/Zamioculcas.png" class="card-img-top" alt="Philodendron">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold text-dark-green">Zamioculcas</h5>
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-secondary">$30.00</span>
+                                <span class="fw-bold ms-2">$20.00</span>
+                            </p>
+                            <a href="#" class="btn btn-dark-green rounded-pill px-4 add-to-cart" data-name="Dracaena trifasciata" data-price="20.00">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <button id="carouselNext" class="carousel-btn carousel-btn-next" aria-label="Next plants">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+        </div>
             <p id="noResults" class="text-center text-secondary mt-4 d-none">No plants found in this category yet.</p>
         </div>
     </section>

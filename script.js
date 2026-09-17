@@ -1,3 +1,20 @@
+// Carrusel de plantas (flechas)
+
+const plantTrack = document.getElementById("plantGrid");
+const carouselPrev = document.getElementById("carouselPrev");
+const carouselNext = document.getElementById("carouselNext");
+
+const scrollAmount = 270; // ancho de una tarjeta (250px) + el gap (~1.5rem)
+
+carouselNext.addEventListener("click", () => {
+  plantTrack.scrollBy({ left: scrollAmount, behavior: "smooth" });
+});
+
+carouselPrev.addEventListener("click", () => {
+  plantTrack.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+});
+
+
 //Filtro de categorias
 
 const filterTabs = document.querySelectorAll(".filter-tab");
