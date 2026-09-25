@@ -162,6 +162,17 @@
                 <p class="text-secondary">Take home one of our favorites — easy to care for, hard not to love.</p>
             </div>
 
+             <div class="row justify-content-center mb-4">
+                <div class="col-md-5">
+                    <div class="position-relative">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"></i>
+                        <input type="text" id="searchInput" class="form-control rounded-pill ps-5"
+                               placeholder="Search plants...">
+                    </div>
+                </div>
+            </div>
+
+
             <ul class="nav justify-content-center mb-5 border-bottom pb-2" id="filterTabs">
                 <li class="nav-item"><a
                         class="nav-link active text-dark-green fw-bold border-bottom border-2 border-success filter-tab"
@@ -294,8 +305,9 @@
             <button id="carouselNext" class="carousel-btn carousel-btn-next" aria-label="Next plants">
                     <i class="bi bi-chevron-right"></i>
                 </button>
-        </div>
-            <p id="noResults" class="text-center text-secondary mt-4 d-none">No plants found in this category yet.</p>
+
+              <p id="noResults" class="text-center text-secondary mt-4 d-none">No plants found in this category yet.</p> 
+        </div>          
         </div>
     </section>
 
@@ -308,7 +320,7 @@
                 <img src="images/plantlogo-removebg-preview.png" alt="GreenNest Logo" width="32" height="32" class="me-2">
                 <h5 class="fw-bold mb-0">GreenNest</h5>
              </div>
-                <p class="text-white-50 small">Traemos naturaleza a tu espacio. Plantas frescas, cuidado experto y entrega directa a tu puerta.</p>
+                <p class="text-white-50 small">We bring nature to your space. Fresh plants, expert care, and delivery straight to your door.</p>
             </div>
              <div class="col-lg-2 col-md-6">
                 <h6 class="fw-bold mb-3">Shop</h6>
@@ -346,18 +358,18 @@
                     <!-- CART OFFCANVAS -->
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title fw-bold text-dark-green">Your Cart</h5>
+                            <h5 class="offcanvas-title fw-bold text-dark-green">Tu Carrito</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                         </div>
                         <div class="offcanvas-body d-flex flex-column">
                             <ul id="cartItems" class="list-unstyled flex-grow-1"></ul>
-                            <p id="cartEmptyMsg" class="text-secondary text-center">Your cart is empty.</p>
+                            <p id="cartEmptyMsg" class="text-secondary text-center">Tu carrito está vacío.</p>
                             <hr>
                             <div class="d-flex justify-content-between fw-bold mb-3">
                                 <span>Subtotal</span>
                                 <span id="cartSubtotal">$0.00</span>
                             </div>
-                            <button id="clearCartBtn" class="btn btn-outline-secondary btn-sm">Clear cart</button>
+                            <button id="clearCartBtn" class="btn btn-outline-secondary btn-sm">Limpiar</button>
                         </div>
                     </div>
      

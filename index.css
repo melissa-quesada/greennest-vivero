@@ -1,5 +1,6 @@
 .plant-carousel {
     position: relative;
+    min-height: 425px;
 }
 .plant-track {
     display: flex;
@@ -12,6 +13,10 @@
     scrollbar-width: none;
 }
 
+.plant-track::-webkit-scrollbar {
+    display: none;
+}
+
 
 .plant-track .plant-card {
     flex: 0 0 250px;
@@ -20,6 +25,15 @@
 
 .plant-track .plant-card.d-none {
     display: none !important;
+}
+
+#noResults {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0;
 }
 
 .carousel-btn {
@@ -62,6 +76,8 @@ html {
 .plant-card.d-none {
     display: none !important;
 }
+
+
 
 .hero-bg {
     background-image: url('Images/plantbg.jpg');

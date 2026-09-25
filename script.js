@@ -4,7 +4,7 @@ const plantTrack = document.getElementById("plantGrid");
 const carouselPrev = document.getElementById("carouselPrev");
 const carouselNext = document.getElementById("carouselNext");
 
-const scrollAmount = 270; // ancho de una tarjeta (250px) + el gap (~1.5rem)
+const scrollAmount = 274; // ancho de una tarjeta (250px) + el gap (~1.5rem)
 
 carouselNext.addEventListener("click", () => {
   plantTrack.scrollBy({ left: scrollAmount, behavior: "smooth" });
@@ -15,16 +15,41 @@ carouselPrev.addEventListener("click", () => {
 });
 
 
-//Filtro de categorias
+//Filtro de categorias + Buscador
 
 const filterTabs = document.querySelectorAll(".filter-tab");
 const plantCards = document.querySelectorAll(".plant-card");
 const noResults = document.getElementById("noResults");
+const searchInput = document.getElementById("searchInput");
+
+// Estado actual de los filtros 
+let activeCategory = "all";
+let searchTerm = "";
+
+function applyFilters() {
+  let visibleCount = 0;
+
+  plantCards.forEach((card) => {
+    const categories = card.dataset.category.split(" ");
+    const name = card.querySelector("h5").textContent.toLowerCase();
+
+    const matchesCategory = activeCategory === "all" || categories.includes(activeCategory);
+    const matchesSearch = name.includes(searchTerm); //siempre devuelve true
+
+    const isVisible = matchesCategory && matchesSearch;
+
+    card.classList.toggle("d-none", !isVisible);
+    if (isVisible) visibleCount++;
+  });
+
+  noResults.classList.toggle("d-none", visibleCount > 0);
+}
+
 
 filterTabs.forEach((tab) => {
   tab.addEventListener("click", (e) => {
     e.preventDefault();
-    const filter = tab.dataset.filter;
+    activeCategory = tab.dataset.filter;
 
     // Actualiza estilo visual de la pestaña activa
     filterTabs.forEach((t) => {
@@ -34,19 +59,16 @@ filterTabs.forEach((tab) => {
     tab.classList.add("active", "border-bottom", "border-2", "border-success", "fw-bold");
     tab.classList.remove("text-secondary");
 
-    // Muestra u oculta tarjetas según categoría
-    let visibleCount = 0;
-    plantCards.forEach((card) => {
-      const categories = card.dataset.category.split(" "); //convierte el texto en un array
-      const matches = filter === "all" || categories.includes(filter);
-      card.classList.toggle("d-none", !matches);
-      if (matches) visibleCount++;
-    });
-
-    noResults.classList.toggle("d-none", visibleCount > 0);
-
+    applyFilters();
   });
 });
+
+searchInput.addEventListener("input", () => {
+  searchTerm = searchInput.value.trim().toLowerCase();
+  applyFilters();
+});
+
+
 
 //Carrito de compras
 let cart = []; // cada item: { name, price, qty }
@@ -109,7 +131,7 @@ function renderCart() {
   });
 
   cartSubtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-  cartCountEl.textContent = totalItems;
+  cartCountEl.textContent = totalItems; //actualiza numero de items en el carrito
 
   // Vincula los botones de eliminar (se recrean en cada render)
   document.querySelectorAll(".remove-item").forEach((btn) => {
