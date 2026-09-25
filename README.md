@@ -4,6 +4,13 @@ Landing page de e-commerce para una tienda de plantas, con navegación funcional
 
 **Demo en vivo:**  https://melissa-quesada.github.io/greennest-vivero/
 
+<img width="509" height="941" alt="GreenNest Desk" src="https://github.com/user-attachments/assets/0f07c930-8dff-4396-9beb-ca5a3a12d616" />
+
+
+
+
+
+
 ## Tecnologías usadas
 ⸙ HTML5
 
