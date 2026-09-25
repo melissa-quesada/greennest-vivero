@@ -84,6 +84,19 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-bg .container {
+    position: relative;
+    z-index: 1;
 }
 
 .btn-dark-green {
